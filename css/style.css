@@ -16,15 +16,14 @@
 .pipe {
   position: absolute;
   bottom: 0;
-  width: 100px;
+  width: 80px;
   animation: pipe-animation 2s infinite linear;
 }
 
 .personagem {
-  width: 650px;
+  width: 150px;
   position: absolute;
   bottom: 0;
-	left: -200px;
 }
 
 .jump {
@@ -45,14 +44,17 @@
     bottom: 0;
   }
 	40% {
-		bottom: 200px;
+		bottom: 180px;
 	}
   50% {
-    bottom: 200px;
+    bottom: 220px;
   }
 	60% {
-		bottom: 200px;
+		bottom: 220px;
 	}
+  70% {
+    bottom: 180px;
+  }
 	100% {
     bottom: 0;
   }
