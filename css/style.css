@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +9,16 @@
 body {
   background: rgb(42, 203, 42);
 }
+
+h1 {
+  position: fixed;
+  left: 30%;
+  top: 10%;
+  font-family: 'Bungee', sans-serif;
+  color: #fff;
+  text-shadow: 3px 3px black;
+}
+
 
 .game-board {
   width: 100%;
