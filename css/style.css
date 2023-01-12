@@ -7,7 +7,7 @@
 }
 
 body {
-  background: rgb(42, 203, 42);
+  background: rgba(203, 157, 42, 0.507);
 }
 
 h1 {
@@ -22,7 +22,7 @@ h1 {
 .game-board {
   width: 100%;
   height: 500px;
-  border-bottom: 2px solid rgb(42, 203, 42);
+  border-bottom: 10px solid rgb(42, 203, 42);
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -40,11 +40,6 @@ h1 {
   position: absolute;
   width: 355px;
   animation: nuvem-animation 8s infinite linear;
-}
-
-.plano-de-fundo {
-  width: 100%;
-  height: 280px;
 }
 
 .personagem {
@@ -100,5 +95,16 @@ h1 {
 
   to {
     right: 100%;
+  }
+}
+
+
+/* media-care */
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.6em;
+    left: 10%;
+    top: 1%;
   }
 }
