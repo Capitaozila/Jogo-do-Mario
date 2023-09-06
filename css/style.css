@@ -7,7 +7,10 @@
 }
 
 body {
-  background: rgba(203, 157, 42, 0.507);
+  background-image: url("../arquives/piso.png");
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: 300%;
 }
 
 h1 {
@@ -52,6 +55,17 @@ h1 {
 .jump {
   animation: jump 500ms ease-out;
 }
+
+.score {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #fff;
+  font-family: "Bungee", sans-serif;
+  text-shadow: 3px 3px black;
+}
+
 
 @keyframes pipe-animation {
   from {
@@ -98,7 +112,6 @@ h1 {
     right: 100%;
   }
 }
-
 
 /* media-care */
 
