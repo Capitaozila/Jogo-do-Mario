@@ -1,5 +1,6 @@
 const personagem = document.querySelector(".personagem");
 const pipe = document.querySelector(".pipe");
+const gameOverMessage = document.querySelector("h1");
 
 const jump = () => {
   personagem.classList.add("jump");
@@ -8,6 +9,10 @@ const jump = () => {
     personagem.classList.remove("jump");
   }, 500);
 };
+
+function showGameOverMessage() {
+  gameOverMessage.style.display = "block";
+}
 
 const loop = setInterval(() => {
   const pipePosition = pipe.offsetLeft;
@@ -19,9 +24,11 @@ const loop = setInterval(() => {
     pipe.style.animation = "none";
     pipe.style.left = `${pipePosition}px`;
 
-    personagem.src = "../img/game-over.png";
+    personagem.src = "../arquives/game-over.png";
     personagem.style.width = "70px";
     personagem.style.marginLeft = "55px";
+
+    showGameOverMessage();
 
     clearInterval(loop);
   }

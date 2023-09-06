@@ -17,6 +17,7 @@ h1 {
   font-family: "Bungee", sans-serif;
   color: #fff;
   text-shadow: 3px 3px black;
+  display: none;
 }
 
 .game-board {
