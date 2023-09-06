@@ -11,7 +11,9 @@ const jump = () => {
 
 const loop = setInterval(() => {
   const pipePosition = pipe.offsetLeft;
-  const marioPosition = +window.getComputedStyle(personagem).bottom.replace("px", "");
+  const marioPosition = +window
+    .getComputedStyle(personagem)
+    .bottom.replace("px", "");
 
   if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 105) {
     pipe.style.animation = "none";
@@ -26,3 +28,14 @@ const loop = setInterval(() => {
 }, 10);
 
 document.addEventListener("keydown", jump);
+
+// adicionando música ao jogo
+
+const backgroundMusic = document.getElementById("background-music");
+
+backgroundMusic.play();
+
+const musicCredit = document.createElement("p");
+document.body.appendChild(musicCredit);
+
+backgroundMusic.volume = 0.1;
