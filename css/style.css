@@ -1,5 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
 
+:root {
+  --main-font: "Bungee", sans-serif;
+  --main-color: #fff;
+  --shadow-color: black;
+  --bg-color-top: #87ceeb;
+  --bg-color-bottom: #e0f6ff;
+  --pipe-color: rgb(42, 203, 42);
+  --pipe-width: 80px;
+  --pipe-animation-time: 2s;
+  --jump-animation-time: 500ms;
+  --cloud-animation-time: 8s;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -17,33 +30,33 @@ h1 {
   position: fixed;
   left: 25%;
   top: 10%;
-  font-family: "Bungee", sans-serif;
-  color: #fff;
-  text-shadow: 3px 3px black;
+  font-family: var(--main-font);
+  color: var(--main-color);
+  text-shadow: 3px 3px var(--shadow-color);
   display: none;
 }
 
 .game-board {
   width: 100%;
   height: 500px;
-  border-bottom: 10px solid rgb(42, 203, 42);
+  border-bottom: 10px solid var(--pipe-color);
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(#87ceeb, #e0f6ff);
+  background: linear-gradient(var(--bg-color-top), var(--bg-color-bottom));
 }
 
 .pipe {
   position: absolute;
   bottom: 0;
-  width: 80px;
-  animation: pipe-animation 2s infinite linear;
+  width: var(--pipe-width);
+  animation: pipe-animation var(--pipe-animation-time) infinite linear;
 }
 
 .nuvem {
   position: absolute;
   width: 355px;
-  animation: nuvem-animation 8s infinite linear;
+  animation: nuvem-animation var(--cloud-animation-time) infinite linear;
 }
 
 .personagem {
@@ -53,7 +66,7 @@ h1 {
 }
 
 .jump {
-  animation: jump 500ms ease-out;
+  animation: jump var(--jump-animation-time) ease-out;
 }
 
 .score {
@@ -61,16 +74,16 @@ h1 {
   top: 10px;
   right: 10px;
   font-size: 34px;
-  color: #fff;
-  font-family: "Bungee", sans-serif;
-  text-shadow: 3px 3px black;
+  color: var(--main-color);
+  font-family: var(--main-font);
+  text-shadow: 3px 3px var(--shadow-color);
 }
-
 
 @keyframes pipe-animation {
   from {
     right: -100px;
   }
+
   to {
     right: 100%;
   }
@@ -80,24 +93,31 @@ h1 {
   0% {
     bottom: 0;
   }
+
   40% {
     bottom: 180px;
   }
+
   50% {
     bottom: 220px;
   }
+
   65% {
     bottom: 225px;
   }
+
   60% {
     bottom: 225px;
   }
+
   70% {
     bottom: 220px;
   }
+
   75% {
     bottom: 180px;
   }
+
   100% {
     bottom: 0;
   }
@@ -112,8 +132,6 @@ h1 {
     right: 100%;
   }
 }
-
-/* media-care */
 
 @media screen and (max-width: 768px) {
   h1 {
